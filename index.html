@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav">
+        <div class="nav-left">
+          <a href="#">Tentang</a>
+          <a href="#">Toko</a>
+        </div>
+        <div class="nav-right">
+          <a href="#">Gmail</a>
+          <a href="#">Gambar</a>
+          <button class="apps-btn" aria-label="Google apps">⋮</button>
+          <button class="profile-btn">J</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="search-section">
+        <div class="logo" aria-label="Google logo">
+          <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </div>
+
+        <form id="searchForm" class="search-form">
+          <div class="search-box">
+            <span class="icon search-icon">⌕</span>
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Cari apa pun..."
+              autocomplete="off"
+            />
+            <button type="button" class="icon clear-btn" aria-label="Clear input">✕</button>
+            <button type="button" class="icon mic-btn" aria-label="Voice search">🎙</button>
+            <button type="button" class="icon lens-btn" aria-label="Search by image">⌁</button>
+          </div>
+
+          <div id="suggestions" class="suggestions"></div>
+
+          <div class="actions">
+            <button type="submit">Penelusuran Google</button>
+            <button type="button" id="luckyBtn">Saya Lagi Beruntung</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
